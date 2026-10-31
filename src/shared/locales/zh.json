@@ -1,0 +1,57 @@
+{
+  "common": {
+    "save": "保存",
+    "cancel": "取消",
+    "close": "关闭",
+    "add": "添加",
+    "optional": "可选",
+    "showPassword": "显示密码",
+    "hidePassword": "隐藏密码"
+  },
+  "status": {
+    "running": "代理中",
+    "stopped": "已关闭"
+  },
+  "relay": {
+    "proxy": "代理",
+    "whitelist": "白名单",
+    "whitelistValue": "{count} 个域名",
+    "site": "目标网站",
+    "siteDirect": "目标网站 · 直连",
+    "noSite": "非网页",
+    "editProxy": "编辑代理",
+    "editWhitelist": "编辑域名白名单",
+    "start": "开启代理",
+    "stop": "关闭代理"
+  },
+  "domains": {
+    "title": "当前页面的域名",
+    "hint": "打开开关会把域名加入白名单，直接连接；列表中的其余域名走代理",
+    "addToWhitelist": "加入白名单",
+    "empty": "还没有记录到这个页面的请求，刷新页面后再看",
+    "allWhitelisted": "这个页面的域名都已在白名单中",
+    "hosts": "{count} 个主机",
+    "requests": "{count} 次请求",
+    "failed": "有请求失败"
+  },
+  "proxySheet": {
+    "title": "代理服务器",
+    "hint": "浏览器的请求经由此代理访问，域名白名单中的域名除外",
+    "host": "地址",
+    "port": "端口",
+    "username": "用户名",
+    "password": "密码",
+    "incomplete": "请填写地址和端口"
+  },
+  "whitelistSheet": {
+    "title": "域名白名单",
+    "hint": "这些域名直接连接，不经过代理。example.com 匹配它本身和所有子域名，支持 * 通配符。本机和局域网地址始终直连",
+    "empty": "还没有白名单域名",
+    "remove": "移除"
+  },
+  "notice": {
+    "otherExtension": "代理设置被其他扩展占用，请先停用那个扩展",
+    "notControllable": "代理设置被系统策略锁定，无法修改",
+    "proxyError": "代理出错：{message}"
+  }
+}

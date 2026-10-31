@@ -1,0 +1,30 @@
+{
+  "$schema": "https://dprint.dev/schemas/v0.json",
+  "incremental": true,
+  "typescript": {
+    "lineWidth": 100,
+    "semiColons": "always",
+    "quoteStyle": "preferSingle",
+    "quoteProps": "asNeeded",
+    "singleBodyPosition": "sameLine",
+    "preferSingleLine": true,
+    "arrowFunction.useParentheses": "preferNone",
+    "spaceSurroundingProperties": false
+  },
+  "malva": {
+    "printWidth": 100
+  },
+  "includes": [
+    "**/*.{ts,tsx,json,css}"
+  ],
+  "excludes": [
+    "**/node_modules",
+    "**/*-lock.json",
+    "**/dist"
+  ],
+  "plugins": [
+    "https://plugins.dprint.dev/typescript-0.93.0.wasm",
+    "https://plugins.dprint.dev/json-0.19.3.wasm",
+    "https://plugins.dprint.dev/g-plane/malva-v0.16.0.wasm"
+  ]
+}

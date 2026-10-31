@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Baton",
+  "description": "Run Chrome through a single proxy, and send the sites you pick straight to the web.",
+  "minimum_chrome_version": "120",
+  "permissions": ["proxy", "storage", "webRequest", "webRequestAuthProvider"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

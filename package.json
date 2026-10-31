@@ -1,0 +1,38 @@
+{
+  "name": "baton-extension",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Chrome extension that runs the browser through a single proxy, with a whitelist of sites that connect directly",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "format": "dprint fmt",
+    "format:check": "dprint check",
+    "icons": "for size in 16 32 48 128; do rsvg-convert -w $size -h $size assets/icon.svg -o public/icons/$size.png; done"
+  },
+  "dependencies": {
+    "lucide-react": "^1.66.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwind-merge": "^3.7.0",
+    "tldts-experimental": "^7.4.19",
+    "zustand": "^5.0.16"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/chrome": "^0.3.7",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "dprint": "^0.50.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}

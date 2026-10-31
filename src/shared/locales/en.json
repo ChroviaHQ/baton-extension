@@ -1,0 +1,57 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "add": "Add",
+    "optional": "Optional",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
+  },
+  "status": {
+    "running": "Proxying",
+    "stopped": "Off"
+  },
+  "relay": {
+    "proxy": "Proxy",
+    "whitelist": "Whitelist",
+    "whitelistValue": "{count} domains",
+    "site": "Target Site",
+    "siteDirect": "Target Site · Direct",
+    "noSite": "Not a web page",
+    "editProxy": "Edit proxy",
+    "editWhitelist": "Edit domain whitelist",
+    "start": "Turn On Proxy",
+    "stop": "Turn Off Proxy"
+  },
+  "domains": {
+    "title": "Domains on This Page",
+    "hint": "Switch a domain on to add it to the whitelist and connect directly; the rest use the proxy",
+    "addToWhitelist": "Add to whitelist",
+    "empty": "No requests recorded for this page yet. Reload the page and check again",
+    "allWhitelisted": "All domains on this page are whitelisted",
+    "hosts": "{count} hosts",
+    "requests": "{count} requests",
+    "failed": "Some requests failed"
+  },
+  "proxySheet": {
+    "title": "Proxy Server",
+    "hint": "Browser requests go through this proxy, except domains in the whitelist",
+    "host": "Host",
+    "port": "Port",
+    "username": "Username",
+    "password": "Password",
+    "incomplete": "Enter a host and port"
+  },
+  "whitelistSheet": {
+    "title": "Domain Whitelist",
+    "hint": "These domains connect directly without the proxy. example.com matches itself and all subdomains; * wildcards are supported. Loopback and LAN addresses always connect directly",
+    "empty": "No whitelisted domains yet",
+    "remove": "Remove"
+  },
+  "notice": {
+    "otherExtension": "Another extension controls the proxy settings. Disable it first",
+    "notControllable": "Proxy settings are locked by policy",
+    "proxyError": "Proxy error: {message}"
+  }
+}
