@@ -35,12 +35,12 @@ export function SectionHeader({title, hint}: {title: string; hint: string;}) {
 }
 
 export function EmptyState({children}: {children: ReactNode;}) {
-  return <p className='py-3 text-center text-label text-muted'>{children}</p>;
+  return <p className='py-3 text-center text-caption text-muted'>{children}</p>;
 }
 
 export function ErrorNote({children}: {children: ReactNode;}) {
   return (
-    <div className='flex items-start gap-2 rounded-lg bg-danger-soft px-3 py-2 text-label text-danger'>
+    <div className='flex items-start gap-2 rounded-lg bg-danger-soft px-3 py-2 text-caption text-danger'>
       <TriangleAlert className='my-0.5 size-3.5 shrink-0' />
       <span className='wrap-anywhere'>{children}</span>
     </div>
@@ -63,7 +63,7 @@ export function Segmented<T extends string>(
           aria-pressed={option.value === value}
           onClick={() => onChange(option.value)}
           className={cn(
-            'rounded-md px-2.5 py-1 text-label font-medium transition',
+            'rounded-md px-2.5 py-1 text-caption font-medium transition',
             option.value === value
               ? 'bg-surface text-text shadow-sm'
               : 'text-muted hover:text-text',
@@ -110,7 +110,7 @@ export function PasswordField(props: Omit<TextFieldProps, 'type' | 'trailing'>) 
           tabIndex={-1}
           title={reveal ? t.common.hidePassword : t.common.showPassword}
           onClick={() => setReveal(value => !value)}
-          className='mr-0.5'
+          className='mr-1'
         >
           {reveal ? <EyeOff className='size-3.5' /> : <Eye className='size-3.5' />}
         </IconButton>
@@ -216,21 +216,21 @@ export function Sheet(
 
   return (
     <div className='fixed inset-0 z-10 flex flex-col justify-end'>
-      <div className='sheet-fade absolute inset-0 bg-black/35' onClick={onClose} />
+      <div className='animate-sheet-fade absolute inset-0 bg-black/35' onClick={onClose} />
       <form
-        className='sheet-up relative flex max-h-[88%] flex-col rounded-t-2xl border-t border-line bg-surface shadow-card'
+        className='animate-sheet-up relative flex max-h-[88%] flex-col rounded-t-2xl border-t border-line bg-surface shadow-card'
         onSubmit={submit}
       >
         <header className='flex flex-col gap-0.5 px-4 pt-4'>
           <div className='flex items-center justify-between gap-3'>
-            <h2 className='text-heading font-semibold tracking-tight'>{title}</h2>
-            <IconButton title={t.common.close} onClick={onClose}>
+            <h2 className='text-title font-semibold tracking-tight'>{title}</h2>
+            <IconButton title={t.common.close} onClick={onClose} className='-mr-1.5'>
               <X className='size-4' />
             </IconButton>
           </div>
-          <p className='text-label text-muted'>{hint}</p>
+          <p className='text-caption text-muted'>{hint}</p>
         </header>
-        <div className='flex min-h-0 flex-col gap-3 overflow-y-auto px-4 pt-3.5'>{children}</div>
+        <div className='flex min-h-0 flex-col gap-3 overflow-y-auto px-4 pt-3'>{children}</div>
         <footer className='flex justify-end gap-2 p-4'>
           <Button onClick={onClose}>{t.common.cancel}</Button>
           <Button type='submit' variant='primary'>{t.common.save}</Button>

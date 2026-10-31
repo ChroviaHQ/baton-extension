@@ -57,7 +57,8 @@ export function RelayTrack(
             y2='0'
             strokeWidth='2'
             strokeLinecap='round'
-            className={active ? 'relay-flow stroke-accent' : 'stroke-line'}
+            strokeDasharray={active ? '4 4' : undefined}
+            className={active ? 'animate-relay-flow stroke-accent' : 'stroke-line'}
           />
         </svg>
       </div>

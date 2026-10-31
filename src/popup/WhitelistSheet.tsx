@@ -57,7 +57,7 @@ export function WhitelistSheet() {
           <div className='flex min-h-0 flex-col divide-y divide-line overflow-y-auto rounded-lg border border-line'>
             {draft.map(pattern => (
               <div key={pattern} className='flex h-9 shrink-0 items-center gap-2 pr-1.5 pl-3'>
-                <span className='min-w-0 flex-1 truncate font-mono text-code'>{pattern}</span>
+                <span className='min-w-0 flex-1 truncate font-mono text-body'>{pattern}</span>
                 <IconButton
                   title={t.whitelistSheet.remove}
                   onClick={() => remove(pattern)}
