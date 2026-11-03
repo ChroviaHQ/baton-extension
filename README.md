@@ -17,8 +17,6 @@ Chrome ──► Baton ──► Proxy ──► Destination
 - Records every domain the current page requests and highlights domains whose requests failed.
 - Adds a recorded domain to the whitelist with one switch, so it connects directly from then on.
 - Matches whitelist entries against the domain and all of its subdomains, with `*` and `?` wildcards.
-- Always connects directly to loopback and LAN addresses.
-- Restores Chrome's own proxy setting when turned off.
 - Follows the Chrome UI language (English or Simplified Chinese) and the system light or dark theme.
 
 ## Getting Started
@@ -60,6 +58,8 @@ The unpacked extension is written to `dist/`. Use `npm run dev` to rebuild on ev
 | `npm run format`       | Format with dprint                                              |
 | `npm run format:check` | Check formatting                                                |
 | `npm run icons`        | Render `assets/icon.svg` to `public/icons/` with `rsvg-convert` |
+| `npm run zip`          | Build and pack `dist/` into `baton.zip`                         |
+| `npm run release`      | Build, upload, and publish to the Chrome Web Store              |
 
 ## Limitations
 

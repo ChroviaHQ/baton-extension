@@ -14,6 +14,8 @@
     "typecheck": "tsc --noEmit",
     "format": "dprint fmt",
     "format:check": "dprint check",
+    "zip": "npm run build && cd dist && bestzip ../baton.zip *",
+    "release": "npm run build && chrome-webstore-upload --source dist",
     "icons": "for size in 16 32 48 128; do rsvg-convert -w $size -h $size assets/icon.svg -o public/icons/$size.png; done"
   },
   "dependencies": {
@@ -30,6 +32,8 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "bestzip": "^4.0.3",
+    "chrome-webstore-upload-cli": "^4.0.2",
     "dprint": "^0.50.2",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
